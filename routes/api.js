@@ -32,3 +32,46 @@ router.put("/api/workouts/:id", ({body, params}, res) => {
             res.json(err);
         });
 });
+
+
+router.get("/api/workouts", (req, res) => {
+    console.log(res);
+    Workouts.find()
+    .then(
+        dbWorkOut => {
+            res.json(dbWorkOut)
+        }
+    )
+    .catch(err => {
+        res.json(err);
+    });
+});
+
+router.get("/api/workouts/range", (req, res) => {
+    console.log(res);
+    Workouts.find({})
+    .limit(7)
+    .then(
+        dbWorkOut => {
+            res.json(dbWorkOut);
+        }
+    )
+    .catch(err => {
+        res.json(err);
+    });
+
+});
+
+router.delete("/api/workouts", ({ body }, res) => {
+    console.log(res);
+    Workouts.findByIdAndDelete(body.id)
+    .then(() => {
+        res.json(true)
+    })
+    .catch(err => {
+        res.json(err);
+    });
+
+});
+
+module.exports = router;
