@@ -1,0 +1,32 @@
+{
+  "name": "workout-tracker",
+  "version": "1.0.0",
+  "description": "This app allows users to create their own workouts and provide visual feedback on their exercises.",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.10.9",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Reedsantos/Workout-Tracker.git"
+  },
+  "keywords": [
+    "workout",
+    "tracker",
+    "nosql",
+    "mongo"
+  ],
+  "author": "Reed Santos",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Reedsantos/Workout-Tracker/issues"
+  },
+  "homepage": "https://github.com/Reedsantos/Workout-Tracker#readme"
+}
