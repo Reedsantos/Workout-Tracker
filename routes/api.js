@@ -1,6 +1,8 @@
+// dependencies
 const router = require("express").Router()
 const Workouts = require("../models/workout.js");
 
+// post route
 router.post("/api/workouts", (req, res) => {
     console.log(res);
     Workouts.create({})
@@ -14,6 +16,7 @@ router.post("/api/workouts", (req, res) => {
         });
 });
 
+// put route
 router.put("/api/workouts/:id", ({body, params}, res) => {
     console.log(res);
     Workouts.findByIdAndUpdate(
@@ -34,6 +37,7 @@ router.put("/api/workouts/:id", ({body, params}, res) => {
 });
 
 
+// get routes
 router.get("/api/workouts", (req, res) => {
     console.log(res);
     Workouts.find()
@@ -62,6 +66,7 @@ router.get("/api/workouts/range", (req, res) => {
 
 });
 
+// delete workout
 router.delete("/api/workouts", ({ body }, res) => {
     console.log(res);
     Workouts.findByIdAndDelete(body.id)
